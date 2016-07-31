@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div id="main">
+  <div id="today">
+    <div id="location"></div>
+    <div id="weather">
+      <i id="todaysIcon" class="wi"></i>
+      <br>
+      <span id="type"></span>
+      <div id="temp">
+        <span id="degree"></span><span id="unit"></span>
+      </div>
+    </div>
+  </div>
+    <ul id="fiveday">
+      <li class="forecast" id="day1"></li>
+      <li class="forecast" id="day2"></li>
+      <li class="forecast" id="day3"></li>
+      <li class="forecast" id="day4"></li>
+      <li class="forecast" id="day5"></li>
+    </ul>
+  </div>
+</div>
+
+ {% for js in page.jsarr %}
+     <script type="text/javascript">
+     {% include {{ js }} %}
+     </script>
+ {% endfor %}
